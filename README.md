@@ -35,7 +35,7 @@ fundamental-analysis-toolkit/
 └── README.md
 
 ⚙️ Installation
-git clone https://github.com/linuschulze-quant/fundamental-analysis-toolkit.git
+git clone https://github.com/linuschulze-quant/fundamental-analysis-toolkit
 cd fundamental-analysis-toolkit
 pip install -r requirements.txt
 
