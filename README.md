@@ -33,7 +33,7 @@ fundamental-analysis-toolkit/
 ├── data/raw/      # Raw financial data
 ├── requirements.txt
 └── README.md
-
+```
 
 ## ⚙️ Installation
 
@@ -41,6 +41,8 @@ fundamental-analysis-toolkit/
 git clone https://github.com/linuschulze-quant/fundamental-analysis-toolkit.git
 cd fundamental-analysis-toolkit
 pip install -r requirements.txt
+```
+
 ▶️ Usage
 Set the ticker and parameters in src/setup.py.
 
