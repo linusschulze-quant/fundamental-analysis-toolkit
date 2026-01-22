@@ -24,7 +24,9 @@ Probability-Adjusted Risk/Reward Ratios
 
 Backtesting Framework (in progress)
 
-# Project Structure
+## 🧱 Project Structure
+
+```text
 fundamental-analysis-toolkit/
 ├── src/           # Core analysis logic (reusable functions)
 ├── notebooks/     # Step-by-step analysis workflows
@@ -32,31 +34,32 @@ fundamental-analysis-toolkit/
 ├── requirements.txt
 └── README.md
 
-# Installation
+
+## ⚙️ Installation
+
 ```bash
 git clone https://github.com/linuschulze-quant/fundamental-analysis-toolkit.git
 cd fundamental-analysis-toolkit
 pip install -r requirements.txt
-
 ▶️ Usage
+Set the ticker and parameters in src/setup.py.
 
-1. Set the ticker and parameters in `src/setup.py`.
-2. Load financial data from the `data/` directory.
-3. Run the notebooks in `notebooks/` in numerical order.
-4. Review outputs directly in the notebooks.
+Load financial data from the data/ directory.
 
+Run the notebooks in notebooks/ in numerical order.
+
+Review outputs directly in the notebooks.
 
 📊 Data Sources
-
 Financial statement data is sourced from:
 
-- [Wall Street Numbers](https://wallstreetnumbers.com) (CSV exports)
-- [Yahoo Finance via yfinance](https://pypi.org/project/yfinance/)
+Wall Street Numbers (CSV exports)
+
+Yahoo Finance via yfinance
 
 All datasets are used for research and educational purposes only.
 
 🎯 Project Goals
-
 Build a transparent, reproducible valuation framework.
 
 Separate financial logic from presentation and experimentation.
@@ -66,7 +69,6 @@ Enable scalable equity research workflows.
 Support both discretionary and systematic investment analysis.
 
 👥 Target Audience
-
 Quantitative analysts
 
 Fundamental investors
@@ -76,9 +78,7 @@ Finance students
 Researchers building valuation pipelines
 
 ⚠️ Disclaimer
-
 This project is for educational and research purposes only and does not constitute financial advice.
 
 📬 Contributions
-
 Pull requests and feedback are welcome. This project is under active development.
