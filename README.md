@@ -24,39 +24,34 @@ Probability-Adjusted Risk/Reward Ratios
 
 Backtesting Framework (in progress)
 
-🧱 Project Structure
+# Project Structure
 fundamental-analysis-toolkit/
-│
-├── src/                # Core analysis logic (reusable functions)
-├── notebooks/         # Step-by-step analysis workflows
-├── data/              # Raw and processed financial data
-├── figures/           # Optional output outputs
+├── src/           # Core analysis logic (reusable functions)
+├── notebooks/     # Step-by-step analysis workflows
+├── data/raw/      # Raw financial data
 ├── requirements.txt
 └── README.md
 
-⚙️ Installation
-git clone https://github.com/linusschulze-quant/fundamental-analysis-toolkit
+# Installation
+```bash
+git clone https://github.com/linuschulze-quant/fundamental-analysis-toolkit.git
 cd fundamental-analysis-toolkit
 pip install -r requirements.txt
 
 ▶️ Usage
 
-Set the ticker and parameters in src/setup.py.
-
-Load financial data from the data/ directory.
-
-Run the notebooks in the notebooks/ folder in numerical order.
-
-Review outputs directly in the notebooks.
+1. Set the ticker and parameters in `src/setup.py`.
+2. Load financial data from the `data/` directory.
+3. Run the notebooks in `notebooks/` in numerical order.
+4. Review outputs directly in the notebooks.
 
 
 📊 Data Sources
 
 Financial statement data is sourced from:
 
-Wall Street Numbers (CSV exports)
-
-Yahoo Finance via the yfinance API
+- [Wall Street Numbers](https://wallstreetnumbers.com) (CSV exports)
+- [Yahoo Finance via yfinance](https://pypi.org/project/yfinance/)
 
 All datasets are used for research and educational purposes only.
 
