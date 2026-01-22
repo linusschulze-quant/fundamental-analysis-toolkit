@@ -4,7 +4,7 @@ A modular, professional-grade Python framework for conducting systematic fundame
 
 This repository provides reusable financial analysis functions and well-documented notebooks covering financial statements, valuation, risk/reward analysis, and forensic accounting techniques.
 
-🚀 Features
+## 🚀 Features
 
 Company Information & Financial Overview
 
@@ -24,66 +24,67 @@ Probability-Adjusted Risk/Reward Ratios
 
 Backtesting Framework (in progress)
 
-🧱 Project Structure
+## 🧱 Project Structure
+
+```text
 fundamental-analysis-toolkit/
-│
-├── src/                # Core analysis logic (reusable functions)
-├── notebooks/         # Step-by-step analysis workflows
-├── data/              # Raw and processed financial data
-├── figures/           # Optional output outputs
+├── src/           # Core analysis logic (reusable functions)
+├── notebooks/     # Step-by-step analysis workflows
+├── data/raw/      # Raw financial data
 ├── requirements.txt
 └── README.md
+```
 
-⚙️ Installation
+## ⚙️ Installation
+
+```bash
 git clone https://github.com/linuschulze-quant/fundamental-analysis-toolkit.git
 cd fundamental-analysis-toolkit
 pip install -r requirements.txt
+```
 
-▶️ Usage
+## ▶️ Usage
 
-Set the ticker and parameters in src/setup.py.
+1. Set the ticker and parameters in src/setup.py.
+2. Load financial data from the data/ directory.
+3. Run the notebooks in notebooks/ in numerical order.
+4. Review outputs directly in the notebooks.
 
-Load financial data from the data/ directory.
-
-Run the notebooks in the notebooks/ folder in numerical order.
-
-Review outputs directly in the notebooks.
-
-
-📊 Data Sources
+## 📊 Data Sources
 
 Financial statement data is sourced from:
 
-Wall Street Numbers (CSV exports)
+- **[Wall Street Numbers](https://wallstreetnumbers.com)** (CSV exports)  
+- **[Yahoo Finance via yfinance](https://pypi.org/project/yfinance/)**  
 
-Yahoo Finance via the yfinance API
+> All datasets are used for research and educational purposes only.
 
-All datasets are used for research and educational purposes only.
+---
 
-🎯 Project Goals
+## 🎯 Project Goals
 
-Build a transparent, reproducible valuation framework.
+- Build a transparent, reproducible valuation framework.  
+- Separate financial logic from presentation and experimentation.  
+- Enable scalable equity research workflows.  
+- Support both discretionary and systematic investment analysis.
 
-Separate financial logic from presentation and experimentation.
+---
 
-Enable scalable equity research workflows.
+## 👥 Target Audience
 
-Support both discretionary and systematic investment analysis.
+- Quantitative analysts  
+- Fundamental investors  
+- Finance students  
+- Researchers building valuation pipelines
 
-👥 Target Audience
+---
 
-Quantitative analysts
+## ⚠️ Disclaimer
 
-Fundamental investors
+This project is for educational and research purposes only and **does not constitute financial advice**.
 
-Finance students
+---
 
-Researchers building valuation pipelines
-
-⚠️ Disclaimer
-
-This project is for educational and research purposes only and does not constitute financial advice.
-
-📬 Contributions
+## 📬 Contributions
 
 Pull requests and feedback are welcome. This project is under active development.
