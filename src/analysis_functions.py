@@ -2,7 +2,6 @@
 
 import pandas as pd
 import numpy as np
-from src.setup import ticker, TICKER, TAX_RATE, BETA,  RISK_FREE_RATE, MARKET_RETURN, CREDIT_SPREAD,  df, annual_avg, info, balance_sheet, market_cap, price, shares_outstanding, market_risk_premium, equity_risk_premium
 
 # =========================
 # Balance Sheet Analysis
