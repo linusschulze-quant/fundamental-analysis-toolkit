@@ -60,9 +60,7 @@ These notebooks are designed for:
 ## 🚀 Future Extensions
 
 Planned additions include:
-- Backtesting frameworks,
-- Portfolio construction models,
-- Factor analysis and strategy optimization notebooks.
+- Backtesting frameworks
 
 ---
 
