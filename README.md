@@ -82,6 +82,8 @@ Financial statement data is sourced from:
 ## ⚠️ Disclaimer
 
 This project is for educational and research purposes only and **does not constitute financial advice**.
+All data, charts, and analyses are provided "as is" and should be **independently verified** before making any financial decisions.  
+Users are responsible for their own actions and interpretations.  
 
 ---
 
