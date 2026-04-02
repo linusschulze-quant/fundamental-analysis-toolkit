@@ -55,12 +55,6 @@ These notebooks are designed for:
 - Investors interested in systematic fundamental analysis,
 - Researchers exploring valuation and financial risk models.
 
----
-
-## 🚀 Future Extensions
-
-Planned additions include:
-- Backtesting frameworks
 
 ---
 
