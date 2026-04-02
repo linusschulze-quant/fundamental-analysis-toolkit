@@ -22,8 +22,6 @@ Risk/Reward & Valuation Range Analysis (EV/EBITDA & P/E)
 
 Probability-Adjusted Risk/Reward Ratios
 
-Backtesting Framework (in progress)
-
 ## 🧱 Project Structure
 
 ```text
