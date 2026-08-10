@@ -1,90 +1,140 @@
-# fundamental-analysis-toolkit
+# Fundamental Analysis Toolkit
 
-A modular, professional-grade Python framework for conducting systematic fundamental equity analysis.
+A reproducible Python framework for fundamental equity analysis, combining financial statement analysis, valuation, profitability, forensic accounting, and historical valuation research.
 
-This repository provides reusable financial analysis functions and well-documented notebooks covering financial statements, valuation, risk/reward analysis, and forensic accounting techniques.
+The current implementation applies the framework to **Microsoft Corporation (MSFT)** using fixed historical data and stored financial-statement snapshots. The analytical notebooks do not require live market-data requests, ensuring that results remain transparent and reproducible.
 
-## 🚀 Features
+## Overview
 
-Company Information & Financial Overview
+The toolkit contains seven analysis modules:
 
-Balance Sheet Analysis
+| Notebook                          | Focus                                                               |
+| --------------------------------- | ------------------------------------------------------------------- |
+| `01_balance_sheet_analysis.ipynb` | Balance sheet structure, leverage, and net debt                     |
+| `02_capital_analysis.ipynb`       | Capital structure, WACC, and financing efficiency                   |
+| `03_dcf_analysis.ipynb`           | Discounted Cash Flow valuation                                      |
+| `04_profitability_analysis.ipynb` | Margins, returns, cash generation, and growth                       |
+| `05_company_info.ipynb`           | Company, market, and book-value information                         |
+| `06_beneish_m_score.ipynb`        | Beneish M-Score forensic accounting analysis                        |
+| `07_risk_reward_analysis.ipynb`   | Historical P/E and EV/EBITDA distributions and risk/reward analysis |
 
-Capital Structure & Leverage Analysis
+For a detailed explanation of each module and its methodology, see [`notebooks/README.md`](notebooks/README.md).
 
-Discounted Cash Flow (DCF) Valuation
+## Methodology
 
-Profitability & Efficiency Metrics
+The project separates **data acquisition from analysis**.
 
-Beneish M-Score (Earnings Manipulation Detection)
+Instead of downloading new data whenever a notebook is executed, the analysis uses stored datasets with defined reporting dates. This prevents historical outputs from changing because of later data revisions and makes the calculations reproducible.
 
-Risk/Reward & Valuation Range Analysis (EV/EBITDA & P/E)
+Particular attention is paid to distinguishing:
 
-Probability-Adjusted Risk/Reward Ratios
+* annual financial-statement data
+* quarterly balance-sheet data
+* trailing-twelve-month metrics
+* historical valuation series
+* point-in-time market data
 
-## 🧱 Project Structure
+The current dataset includes market data through **December 26, 2025** and the latest quarterly financial-statement snapshot through **September 30, 2025**.
+
+## Project Structure
 
 ```text
 fundamental-analysis-toolkit/
-├── src/           # Core analysis logic (reusable functions)
-├── notebooks/     # Step-by-step analysis workflows
-├── data/raw/      # Raw financial data
+├── data/
+│   ├── raw/            # Historical financial and valuation series
+│   └── snapshot/       # Fixed financial-statement and company snapshots
+│
+├── notebooks/
+│   ├── 01_balance_sheet_analysis.ipynb
+│   ├── 02_capital_analysis.ipynb
+│   ├── 03_dcf_analysis.ipynb
+│   ├── 04_profitability_analysis.ipynb
+│   ├── 05_company_info.ipynb
+│   ├── 06_beneish_m_score.ipynb
+│   ├── 07_risk_reward_analysis.ipynb
+│   └── README.md
+│
+├── src/
+│   └── setup.py        # Shared configuration and data preparation
+│
 ├── requirements.txt
 └── README.md
 ```
 
-## ⚙️ Installation
+## Key Features
+
+* Financial statement and capital structure analysis
+* CAPM-based cost of equity and WACC calculation
+* Discounted Cash Flow valuation
+* Profitability, efficiency, and cash-flow metrics
+* Beneish M-Score earnings-manipulation screening
+* Historical P/E and EV/EBITDA distribution analysis
+* Valuation-based WC / Buy / Fair Value / Sell reference levels
+* Empirical historical valuation frequencies
+* Explicit handling of different reporting periods
+* Fixed-input architecture for reproducible analysis
+
+## Installation
 
 ```bash
-git clone https://github.com/linuschulze-quant/fundamental-analysis-toolkit.git
+git clone https://github.com/linusschulze-quant/fundamental-analysis-toolkit.git
 cd fundamental-analysis-toolkit
 pip install -r requirements.txt
 ```
 
-## ▶️ Usage
+Required analytical dependencies:
 
-1. Set the ticker and parameters in src/setup.py.
-2. Load financial data from the data/ directory.
-3. Run the notebooks in notebooks/ in numerical order.
-4. Review outputs directly in the notebooks.
+```text
+numpy
+pandas
+```
 
-## 📊 Data Sources
+Open the repository in a Jupyter-compatible environment such as JupyterLab, Jupyter Notebook, or VS Code.
 
-Financial statement data is sourced from:
+## Usage
 
-- **[Wall Street Numbers](https://wallstreetnumbers.com)** (CSV exports)  
-- **[Yahoo Finance via yfinance](https://pypi.org/project/yfinance/)**  
+1. Review the shared configuration and data preparation in `src/setup.py`.
+2. Open the notebooks in `notebooks/`.
+3. Run the notebooks in numerical order or execute individual analyses independently.
+4. Review methodology, outputs, and limitations directly inside each notebook.
 
-> All datasets are used for research and educational purposes only.
+The current repository is configured for **MSFT**, but the analytical structure is designed to provide a foundation for applying the same approach to other companies.
 
----
+## Data Sources
 
-## 🎯 Project Goals
+Stored project data originates from:
 
-- Build a transparent, reproducible valuation framework.  
-- Separate financial logic from presentation and experimentation.  
-- Enable scalable equity research workflows.  
-- Support both discretionary and systematic investment analysis.
+* [Wall Street Numbers](https://wallstreetnumbers.com/) — historical financial and valuation series
+* [Yahoo Finance](https://finance.yahoo.com/) — financial-statement and company snapshots originally retrieved via `yfinance`
 
----
+The analytical notebooks operate on the stored files and therefore do **not** require live Yahoo Finance requests.
 
-## 👥 Target Audience
+Snapshot metadata is documented in:
 
-- Quantitative analysts  
-- Fundamental investors  
-- Finance students  
-- Researchers building valuation pipelines
+```text
+data/snapshot/metadata.json
+```
 
----
+## Project Goals
 
-## ⚠️ Disclaimer
+I built this project to develop a more systematic approach to equity research while combining financial analysis with Python.
 
-This project is for educational and research purposes only and **does not constitute financial advice**.
-All data, charts, and analyses are provided "as is" and should be **independently verified** before making any financial decisions.  
-Users are responsible for their own actions and interpretations.  
+The main objectives are to:
 
----
+* make valuation calculations transparent
+* distinguish financial data across reporting periods correctly
+* build reproducible analytical workflows
+* combine fundamental and historical valuation analysis
+* create a foundation for further work in quantitative finance and systematic equity research
 
-## 📬 Contributions
+## Limitations
 
-Pull requests and feedback are welcome. This project is under active development.
+This repository is an analytical and educational framework rather than a complete institutional valuation model.
+
+Model outputs depend on their underlying assumptions and data definitions. Historical valuation levels are descriptive rather than predictive, DCF results are sensitive to growth and discount-rate assumptions, and financial-statement and market-data dates do not always coincide.
+
+## Disclaimer
+
+This project is for educational and research purposes only and does **not constitute financial advice**.
+
+All calculations and model outputs should be independently evaluated before being used for any financial decision.
